@@ -10,7 +10,6 @@
         </h1>
 
         <form action="/host/<%= editing ? 'edit-home' : 'add-home' %>" method="POST" class="space-y-6">
-          <!-- Hidden ID for Edit -->
           <input type="hidden" name="id" value="<%= editing && home ? home._id : '' %>" />
 
           <!-- Recipe Name -->
@@ -43,7 +42,7 @@
 
           <!-- Rating / Difficulty -->
           <div>
-            
+
             <label class="block text-gray-700 font-medium mb-2">Difficulty / Rating</label>
             <input type="text" name="rating" value="<%= editing && home ? home.rating : '' %>"
               placeholder="Ex: Easy / 4.5 stars"
