@@ -25,7 +25,7 @@ app.use(express.static(path.join(rootDir, 'public')))
 
 app.use(errorsController.pageNotFound);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const MOUNGO_URL = "mongodb+srv://airbnbUser:Harsh123@airbnb.xxylmkm.mongodb.net/airbnb?retryWrites=true&w=majority";
 mongoose.connect(MOUNGO_URL).then(() => {
   console.log("Database connected");
