@@ -1,0 +1,39 @@
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Left: Logo -->
+    <a href="/" class="text-red-500 text-2xl font-bold tracking-tight">
+      RecipesApp
+    </a>
+
+
+
+    <!-- Right: Navigation -->
+    <ul class="flex items-center gap-4 text-sm font-medium">
+      <li>
+        <a href="/" class="px-4 py-2 rounded-full hover:bg-gray-100 transition
+          <%= currentPage === 'Home' ? 'bg-gray-100' : '' %>">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="/host/add-home" class="px-4 py-2 rounded-full hover:bg-gray-100 transition
+          <%= currentPage === 'addHome' ? 'bg-gray-100' : '' %>">
+          Add Recipe
+        </a>
+      </li>
+      <li>
+        <a href="/host/host-home-list" class="px-4 py-2 rounded-full hover:bg-gray-100 transition
+          <%= currentPage === 'host-homes' ? 'bg-gray-100' : '' %>">
+          My Recipes
+        </a>
+      </li>
+      <li>
+        <!-- Profile Icon -->
+
+      </li>
+    </ul>
+
+  </nav>
+</header>
