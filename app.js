@@ -1,6 +1,6 @@
 // Core Module
 const path = require('path');
-
+require('dotenv').config();
 // External Module
 const express = require('express');
 const mongoose = require('mongoose');
@@ -32,10 +32,10 @@ app.use(errorsController.pageNotFound);
 
 // Environment variables
 const PORT = process.env.PORT || 3000;
-const MONGO_URL = process.env.MONGO_URL;
+const MONGO_URI = process.env.MONGO_URI;
 
 // Database + Server
-mongoose.connect(MONGO_URL)
+mongoose.connect(MONGO_URI)
   .then(() => {
     console.log(" Database connected");
     app.listen(PORT, () => {
